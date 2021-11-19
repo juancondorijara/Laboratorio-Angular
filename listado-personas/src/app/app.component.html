@@ -1,0 +1,16 @@
+<div class="box" id="heading">
+  <h1>Listado de Personas</h1>
+</div>
+
+<div class="box" >
+
+  <app-persona 
+    *ngFor="let personaElemento of personas; let i = index"
+    [persona]="personaElemento"
+    [indice]="i"
+    ></app-persona>
+</div>
+
+<div class="box" > 
+  <app-formulario></app-formulario> 
+</div>

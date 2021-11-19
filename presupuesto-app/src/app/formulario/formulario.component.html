@@ -1,0 +1,27 @@
+<form (ngSubmit)="f.form.valid && agregarValor()" #f="ngForm">
+    <div>
+        <div class="agregar" >
+            <div class="agregar_contenedor">
+                <select (change)="tipoOperacion($event)" class="agregar_tipo" [ngClass]="{redfocus: tipo === 'egresoOperacion'}">
+                    <option value="ingresoOperacion" selected>+</option>
+                    <option value="egresoOperacion">-</option>
+                </select>
+                <input [ngClass]="{redfocus: tipo === 'egresoOperacion'}"
+                    type="text"  
+                    class="agregar_descripcion" 
+                    placeholder="Agregar Descripción"
+                    name="descripcionInput"
+                    [(ngModel)]="descripcionInput" required>    
+                <input [ngClass]="{redfocus: tipo === 'egresoOperacion'}"
+                    type="number" 
+                    class="agregar_valor" 
+                    placeholder="Valor"
+                    name="valorInput"
+                    [(ngModel)]="valorInput" required>
+                <button type="submit" class="agregar_btn" >
+                    <i class="ion-ios-checkmark-outline" [ngClass]="{red: tipo === 'egresoOperacion'}"></i> 
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
