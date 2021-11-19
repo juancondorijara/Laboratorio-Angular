@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 style="color: blue; font-weight:bold; font-size:40px">{{titulo}}</h1>
+    <form>
+        <div class="form-group">
+            <label style="color: black; font-weight:bold; font-size:30px">Operando A</label>
+            <input type="number" class="form-control" placeholder="Escribe operando A" [(ngModel)]="operandoA" name="operandoA" style="color: black; width:250px; font-weight:bold; font-size:20px" />
+        </div>
+        <div class="form-group">
+            <label style="color: black; font-weight:bold; font-size:30px">Operando B</label>
+            <input type="number" class="form-control" placeholder="Escribe operando B" [(ngModel)]="operandoB" name="operandoB" style="color: black; width:250px; font-weight:bold; font-size:20px" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" (click)="sumar()" style="width:100px; font-weight:bold; font-size:20px">SUMAR</button>
+            <button type="submit" class="btn btn-primary" (click)="restar()" style="width:100px; font-weight:bold; font-size:20px">RESTAR</button>
+            <button type="submit" class="btn btn-primary" (click)="multiplicar()" style="width:150px; font-weight:bold; font-size:20px">MULTIPLICAR</button>
+            <button type="submit" class="btn btn-primary" (click)="dividir()" style="width:100px; font-weight:bold; font-size:20px">DIVIDIR</button>
+        </div>
+        <div class="form-group">
+            <input type="number" disabled="true" class="form-control" placeholder="Resultado" [(ngModel)]="resultado" name="resultado" style="color: black; width:200px; font-weight:bold; font-size:20px" />
+        </div>
+        <!-- <div class="form-group">
+            <img src="images/fondo.png" class="image" alt="" style="width:60px; height:40px;" />
+        </div> -->
+    </form>
+</div>
