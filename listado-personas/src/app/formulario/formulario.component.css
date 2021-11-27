@@ -1,0 +1,13 @@
+.ng-valid {
+    /* border: thin solid #090; */
+    border: 3px solid #090;
+    /* background-color: #090; */
+    /* color: #000; */
+}
+
+.ng-invalid {
+    /* border: thin solid #990000; */
+    border: 3px solid #990000;
+    /* background-color: #990000; */
+    /* color: #000; */
+}

@@ -1,6 +1,41 @@
-<form class="item">
-  <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="nombreInput"/>
-  <input type="text" name="apellido" placeholder="Apellido" [(ngModel)]="apellidoInput"/>
-  <button type="submit" (click)="onAgregarPersona()">+</button>
+<form>
+    <div class="mb-3">
+        <label style="color:black; font-weight:bold; font-size:20px">NOMBRES...:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombres" [(ngModel)]="nombreInput" style="width: 230px;" required/>
+    </div>
+    <br/>
+    <div class="mb-3">
+        <label style="color:black; font-weight:bold; font-size:20px">APELLIDOS:</label>
+        <input type="text" name="apellido" id="apellido" placeholder="Apellidos" [(ngModel)]="apellidoInput" style="width: 230px;" required/>
+    </div>
+    <br/>
+    <div class="mb-3">
+        <label style="color:black; font-weight:bold; font-size:20px">DNI................:</label>
+        <input type="text" name="dni" id="dni" placeholder="Dni" [(ngModel)]="dniInput" style="width: 230px; height: 60px;" minlength="8" maxlength="8" required/>
+    </div>
+    <br/>
+    <div class="mb-3">
+        <label style="color:black; font-weight:bold; font-size:20px">CELULAR....:</label>
+        <input type="text" name="celular" id="celular" placeholder="Celular" [(ngModel)]="celularInput" style="width: 230px; height: 60px;" minlength="9" maxlength="9" required/>
+    </div>
+    <br/>
+    <button type="submit" (click)="onAgregarPersona()" style="font-weight:bold; font-size:20px; width: 200px;">+ AGREGAR +</button>
 </form>
 
+<!-- <form class="item">
+    <div class="mb-3">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombres" [(ngModel)]="nombreInput" style="width: 230px;" required/>
+        <input type="text" name="apellido" id="apellido" placeholder="Apellidos" [(ngModel)]="apellidoInput" style="width: 230px;" required/>
+    </div>
+    <div class="mb-3">
+        <input type="number" name="dni" id="dni" placeholder="Dni" [(ngModel)]="dniInput" style="width: 100px; height: 60px;" minlength="8" maxlength="8" required/>
+        <input type="number" name="celular" id="celular" placeholder="Celular" [(ngModel)]="celularInput" style="width: 100px; height: 60px;" minlength="9" maxlength="9" required/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="mb-3">
+        <button type="submit" (click)="onAgregarPersona()">+</button>
+    </div>
+</form> -->

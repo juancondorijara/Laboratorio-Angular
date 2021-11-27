@@ -12,6 +12,8 @@ export class FormularioComponent implements OnInit {
 
   nombreInput:string;
   apellidoInput:string;
+  dniInput:string;
+  celularInput:string;
   
   constructor(private loggingService:LoggingService,
               private personasService:PersonasService ) { 
@@ -24,7 +26,7 @@ export class FormularioComponent implements OnInit {
   }
 
   onAgregarPersona(){
-    let persona1 = new Persona(this.nombreInput, this.apellidoInput);
+    let persona1 = new Persona(this.nombreInput, this.apellidoInput, this.dniInput, this.celularInput);
     this.personasService.agregarPersona(persona1);  
   }
 }
