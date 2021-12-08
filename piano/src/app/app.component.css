@@ -1,0 +1,21 @@
+.list-group-item {
+    cursor: pointer;
+    height: 60px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 101%;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: 100em;
+    background-color: skyblue;
+    /* background: url("../assets/img/fondo.png"); */
+}
+
+.list-group-item:active {
+    opacity: 0.7;
+}
