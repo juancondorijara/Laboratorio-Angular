@@ -1,0 +1,66 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        </button>
+        <h1>CONFLOMARK</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container>
+    <mat-sidenav #sidenav style="width: 230px;" mode="side" role="navigation" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+        <mat-nav-list>
+            <br/>
+            <button mat-raised-button color="primary" routerLink="categorias">CATEGORÍAS</button>
+            <br/>
+            <br/>
+            <button mat-raised-button color="primary" routerLink="abarrotes">ABARROTES</button>
+            <br/>
+            <br/>
+            <button mat-raised-button color="primary" routerLink="desayuno">DESAYUNO</button>
+            <br/>
+            <br/>
+            <button mat-raised-button color="primary" routerLink="lacteosyhuevos">LÁCTEOS Y HUEVOS</button>
+            <br/>
+            <br/>
+            <button mat-raised-button color="primary" routerLink="quesosyfiambres">QUESOS Y FIAMBRES</button>
+            <br/>
+            <br/>
+            <button mat-raised-button color="primary" routerLink="heladosycongelados">HELADOS Y CONGELADOS</button>
+            <br/>
+            <br/>
+            <button mat-raised-button color="primary" routerLink="pizzasypreparados">PIZZAS Y PREPARADOS</button>
+            <br/>
+            <br/>
+            <button mat-raised-button color="primary" routerLink="dulcesysnacks">DULCES Y SNACKS</button>
+            <br/>
+            <br/>
+            <button mat-raised-button color="primary" routerLink="bebidas">BEBIDAS</button>
+            <br/>
+            <br/>
+            <button mat-raised-button color="primary" routerLink="cervezalicoresvinos">CERVEZA, VINOS, ETC</button>
+            <br/>
+            <br/>
+            <button mat-raised-button color="warn" routerLink="cliente">CLIENTES</button>
+            <br/>
+            <br/>
+            <button mat-raised-button color="warn" routerLink="producto">PRODUCTOS</button>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-drawer-container>
+        <div style="height: 88vh;">
+            <router-outlet>
+                <app-principal></app-principal>
+            </router-outlet>
+        </div>
+    </mat-drawer-container>
+</mat-drawer-container>
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        </button>
+        <h1>CONFLOMARK</h1>
+    </mat-toolbar-row>
+</mat-toolbar>

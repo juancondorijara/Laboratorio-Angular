@@ -1,0 +1,79 @@
+<div class="container" style="margin-top: 5em; margin-bottom:5em; width:50%;">
+    <div class="card">
+        <div class="card-header" style="background-color:blue">
+            <h1 style="color:white; text-align: center; font-weight:bold; font-size:25px">FORMULARIO DE PRODUCTO</h1>
+        </div>
+        <div class="card-body">
+            <form class="form">
+
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese el Nombre">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese la Marca">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese la Subfamilia">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese la Presentación">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese la Descripción">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese el Precio">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese el Stock">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese el Vencimiento">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese el Proveedor">
+                </div>
+                <button type="submit" class="btn btn-primary">REGISTRAR</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="formularioRegistro">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>PRODUCTO - MARCA</th>
+                    <th>FAMILIA - SUBFAMILIA</th>
+                    <th>PRESENTACIÓN</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th>PRECIO</th>
+                    <th>STOCK</th>
+                    <!-- <th>VENCIMIENTO</th> -->
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producto of servicio.producto">
+                    <th>{{ producto.IDPRO }}</th>
+                    <td>{{ producto.NOMPRO }} - {{ producto.MARPRO }}</td>
+                    <td>{{ producto.NOMFAM }} - {{ producto.SUBFAM }}</td>
+                    <td>{{ producto.PRESPRO }}</td>
+                    <td>{{ producto.DESPRO }}</td>
+                    <td>{{ producto.PREPRO }}</td>
+                    <td>{{ producto.STOPRO }}</td>
+                    <!-- <td>{{ producto.VENPRO }}</td> -->
+                    <td>
+                        <button type="button" class="btn btn-success">EDITAR</button>
+                        <button type="button" class="btn btn-danger">ELIMINAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<br/>
+<br/>

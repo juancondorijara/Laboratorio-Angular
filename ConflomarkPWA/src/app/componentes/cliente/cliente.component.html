@@ -1,0 +1,106 @@
+<div class="container" style="margin-top: 5em; margin-bottom:5em; width:50%;">
+    <div class="card">
+        <div class="card-header" style="background-color:blue">
+            <h1 style="color:white; text-align: center; font-weight:bold; font-size:25px">FORMULARIO DE CLIENTE</h1>
+        </div>
+        <div class="card-body">
+            <form class="form">
+
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese sus Nombres">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese sus Apellidos">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese su Dirección">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese su Email">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese su DNI">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese su Celular">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese su Distrito">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="Ingrese su Estado">
+                </div>
+                <button type="submit" class="btn btn-primary">REGISTRAR</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="formularioRegistro">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRES Y APELLIDOS</th>
+                    <th>DIRECCIÓN</th>
+                    <th>EMAIL</th>
+                    <th>DNI</th>
+                    <th>CELULAR</th>
+                    <th>DISTRITO</th>
+                    <!-- <th>ESTADO</th> -->
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of servicio.cliente">
+                    <th>{{ cliente.IDCLI }}</th>
+                    <td>{{ cliente.NOMCLI }}, {{ cliente.APECLI }}</td>
+                    <td>{{ cliente.DIRCLI }}</td>
+                    <td>{{ cliente.EMACLI }}</td>
+                    <td>{{ cliente.DNICLI }}</td>
+                    <td>{{ cliente.CELCLI }}</td>
+                    <td>
+                        {{ cliente.DISUBI }}, {{ cliente.PROUBI }}, {{ cliente.DEPUBI }}
+                    </td>
+                    <!-- <td>{{ cliente.ESTCLI }}</td> -->
+                    <td>
+                        <button type="button" class="btn btn-success">EDITAR</button>
+                        <button type="button" class="btn btn-danger">ELIMINAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<br/>
+<br/>
+
+<!-- <div class="container">
+    <div class="formularioRegistro">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>CODIGO</th>
+                    <th>DISTRITO</th>
+                    <th>PROVINCIA</th>
+                    <th>DEPARTAMENTO</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ubigeo of servicio.ubigeo">
+                    <th>{{ ubigeo.CODUBI }}</th>
+                    <td>{{ ubigeo.DISUBI }}</td>
+                    <td>{{ ubigeo.PROUBI }}</td>
+                    <td>{{ ubigeo.DEPUBI }}</td>
+                    <td>
+                        <button type="button" class="btn btn-success">Editar</button>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->
